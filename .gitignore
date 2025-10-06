@@ -11,3 +11,7 @@ DOCUMENTACAO_TECNICA.md
 MANUAL_MELINA.md
 melina.png
 
+
+__pycache__/
+*.pyc
+
