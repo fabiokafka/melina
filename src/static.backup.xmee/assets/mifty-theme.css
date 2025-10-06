@@ -1,0 +1,290 @@
+/* Tela de Login Xmee - Forçar Layout Completo */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+/* Reset completo */
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Body com gradiente azul/roxo */
+body {
+  background: linear-gradient(135deg, #4a148c 0%, #1565c0 50%, #0097a7 100%) !important;
+  font-family: 'Inter', sans-serif !important;
+  overflow: hidden !important;
+  min-height: 100vh !important;
+  position: relative !important;
+}
+
+/* Root container */
+#root {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#root > div {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100vh !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Logo grande à esquerda */
+#root img,
+body img,
+img[src*="melina"],
+img[alt*="Melina"] {
+  position: absolute !important;
+  left: 100px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 450px !important;
+  height: auto !important;
+  max-width: 450px !important;
+  min-width: 450px !important;
+  z-index: 10 !important;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4)) !important;
+  animation: float 3s ease-in-out infinite !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(calc(-50% + 0px)); }
+  50% { transform: translateY(calc(-50% - 20px)); }
+}
+
+/* Card de login à direita */
+#root > div > div,
+#root > div > div > div,
+body > div > div {
+  position: absolute !important;
+  right: 100px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 24px !important;
+  padding: 60px 45px !important;
+  width: 480px !important;
+  max-width: 480px !important;
+  min-width: 480px !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35) !important;
+  z-index: 20 !important;
+  animation: fadeInUp 0.8s ease-out !important;
+  margin: 0 !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(calc(-50% + 40px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+/* Beyond Ocean título */
+#beyond-ocean-title {
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  color: white !important;
+  text-align: center !important;
+  margin-bottom: 50px !important;
+  margin-top: 0 !important;
+  letter-spacing: 3px !important;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.6) !important;
+  padding: 0 !important;
+}
+
+/* Ocultar títulos originais */
+h1, h2, h3,
+p:not(#beyond-ocean-title) {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+}
+
+/* Botão laranja/amarelo gradiente */
+button {
+  width: 100% !important;
+  padding: 18px 28px !important;
+  background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  color: white !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.45) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  margin: 0 !important;
+}
+
+button:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(255, 152, 0, 0.65) !important;
+  background: linear-gradient(135deg, #fb8c00 0%, #f4511e 100%) !important;
+}
+
+button:active {
+  transform: translateY(-1px) !important;
+}
+
+/* Formas geométricas decorativas */
+.geometric-shape-1 {
+  position: fixed !important;
+  top: 10% !important;
+  left: 5% !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 150px solid transparent !important;
+  border-right: 150px solid transparent !important;
+  border-bottom: 260px solid rgba(156, 39, 176, 0.25) !important;
+  z-index: 1 !important;
+  animation: rotate-slow 20s linear infinite !important;
+}
+
+.geometric-shape-2 {
+  position: fixed !important;
+  bottom: 15% !important;
+  right: 8% !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 130px solid transparent !important;
+  border-right: 130px solid transparent !important;
+  border-top: 220px solid rgba(0, 188, 212, 0.25) !important;
+  z-index: 1 !important;
+  animation: rotate-slow-reverse 25s linear infinite !important;
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-slow-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.geometric-circle {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 900px !important;
+  height: 900px !important;
+  border: 2px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 50% !important;
+  z-index: 1 !important;
+}
+
+/* Círculo grande decorativo */
+body::after {
+  content: '' !important;
+  position: fixed !important;
+  top: -15% !important;
+  right: -8% !important;
+  width: 700px !important;
+  height: 700px !important;
+  background: rgba(0, 188, 212, 0.25) !important;
+  border-radius: 50% !important;
+  z-index: 1 !important;
+}
+
+/* Footer */
+footer,
+div:last-child {
+  position: fixed !important;
+  bottom: 25px !important;
+  left: 0 !important;
+  right: 0 !important;
+  text-align: center !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 13px !important;
+  z-index: 30 !important;
+  background: transparent !important;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 1024px) {
+  #root img {
+    left: 50px !important;
+    width: 300px !important;
+    min-width: 300px !important;
+  }
+  
+  #root > div > div {
+    right: 50px !important;
+    width: 400px !important;
+    min-width: 400px !important;
+    padding: 40px 30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #root img {
+    position: relative !important;
+    left: 50% !important;
+    top: 80px !important;
+    transform: translateX(-50%) !important;
+    width: 250px !important;
+    min-width: 250px !important;
+  }
+  
+  #root > div > div {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 200px auto 40px !important;
+    width: calc(100% - 40px) !important;
+    min-width: auto !important;
+    max-width: 450px !important;
+    padding: 40px 30px !important;
+  }
+  
+  #beyond-ocean-title {
+    font-size: 24px !important;
+    margin-bottom: 35px !important;
+  }
+  
+  button {
+    padding: 16px 24px !important;
+    font-size: 15px !important;
+  }
+  
+  .geometric-shape-1,
+  .geometric-shape-2 {
+    display: none !important;
+  }
+  
+  body::after {
+    width: 400px !important;
+    height: 400px !important;
+  }
+}
